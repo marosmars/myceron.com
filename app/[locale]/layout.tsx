@@ -26,11 +26,11 @@ export default function RootLayout({
 }) {
   return (
     <Providers>
-      <div className="relative flex flex-col">
-        <main className="dark container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+      <div>
+        <main className="dark flex flex-col">
           {children}
         </main>
-        <footer className="w-full flex items-center justify-center py-3" />
+        <footer className="w-full flex items-center justify-center" />
       </div>
     </Providers>
   );
