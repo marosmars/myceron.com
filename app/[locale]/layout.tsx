@@ -27,9 +27,7 @@ export default function RootLayout({
   return (
     <Providers>
       <div>
-        <main className="dark flex flex-col">
-          {children}
-        </main>
+        <main className="dark flex flex-col">{children}</main>
         <footer className="w-full flex items-center justify-center" />
       </div>
     </Providers>

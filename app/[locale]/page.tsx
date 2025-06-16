@@ -1,8 +1,9 @@
-import { LOCALES } from "@/i18n/intl";
 import { Image } from "@heroui/image";
 import { Divider } from "@heroui/divider";
 import { Link } from "@heroui/link";
 import { Card, CardHeader, CardBody } from "@heroui/card";
+
+import { LOCALES } from "@/i18n/intl";
 
 export const dynamicParams = false;
 export const dynamic = "force-static";
@@ -25,9 +26,9 @@ export default function Home() {
         <div className="z-10 flex flex-col items-center justify-center">
           <div className="justify-center flex flex-row items-end mt-8 md:mt-10 lg:mt-12 xl:mt-20">
             <Image
-              src="/myceron_favico2_crop_transp.png"
               className="min-w-20 max-w-20 md:min-w-48 md:max-w-48 h-auto"
-            ></Image>
+              src="/myceron_favico2_crop_transp.png"
+            />
             <span className="z-10 font-mono tracking-[.25em] text-4xl md:text-6xl font-extrabold mb-2 md:mb-8 ml-[-2] md:ml-[-6]">
               yceron
             </span>
@@ -38,7 +39,7 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <Divider className="my-2 w-5/6 md:w-3/4"></Divider>
+            <Divider className="my-2 w-5/6 md:w-3/4" />
             <p className="w-5/6 xl:w-3/4 text-center font-mono lg:text-large my-2">
               Myceron is a technology company specializing in the development of
               high-scale enterprise networking applications and consumer-facing
@@ -49,21 +50,20 @@ export default function Home() {
               AI-powered experiences that turn users into customers.
             </p>
             <p className="w-5/6 xl:w-3/4 text-center font-mono lg:text-large my-2">
-              Our team
-              combines years of experience in enterprise-grade networking with
-              advanced capabilities in large language models (LLMs) and
-              image-based AI. From streamlining complex backend operations to
-              enhancing user journeys with intelligent, conversion-optimized
-              interfaces, Myceron delivers robust, scalable, and
-              customer-focused solutions.
+              Our team combines years of experience in enterprise-grade
+              networking with advanced capabilities in large language models
+              (LLMs) and image-based AI. From streamlining complex backend
+              operations to enhancing user journeys with intelligent,
+              conversion-optimized interfaces, Myceron delivers robust,
+              scalable, and customer-focused solutions.
             </p>
-            <Divider className="my-2 w-1/2"></Divider>
+            <Divider className="my-2 w-1/2" />
           </div>
           <div className="hidden 2xl:inline">
-            <Portfolio></Portfolio>
+            <Portfolio />
           </div>
           <div className="hidden 2xl:inline fixed bottom-2">
-            <Footer></Footer>
+            <Footer />
           </div>
         </div>
       </section>
@@ -71,7 +71,7 @@ export default function Home() {
         <Portfolio />
       </section>
       <section className="2xl:hidden relative flex my-2 w-full flex-col items-center">
-        <Footer></Footer>
+        <Footer />
       </section>
     </>
   );
@@ -96,9 +96,9 @@ function Portfolio() {
         <Card className="py-4 bg-neutral-900">
           <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
             <Link
+              isExternal
               className="font-mono text-2xl text-white underline"
               href="https://www.gardendesigner.ai"
-              isExternal
             >
               Gardendesigner.ai
             </Link>
@@ -106,10 +106,10 @@ function Portfolio() {
           </CardHeader>
           <CardBody className="overflow-visible py-2">
             <Image
+              isZoomed
               alt="Card background"
               className="object-cover rounded-xl w-80 h-auto m-2"
               src="/gd.jpeg"
-              isZoomed
             />
           </CardBody>
         </Card>
@@ -117,10 +117,10 @@ function Portfolio() {
         <Card className="py-4 bg-neutral-900">
           <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
             <Link
+              isDisabled
+              isExternal
               className="font-mono blur-md text-2xl text-white underline"
               href="https://www.gardendesigner.ai"
-              isExternal
-              isDisabled
             >
               Gardendesigner.ai
             </Link>
@@ -128,11 +128,11 @@ function Portfolio() {
           </CardHeader>
           <CardBody className="overflow-visible py-2">
             <Image
+              isBlurred
+              isLoading
               alt="Card background"
               className="object-cover rounded-xl w-80 h-auto m-2"
               src="/gd.jpeg"
-              isLoading
-              isBlurred
             />
           </CardBody>
         </Card>
