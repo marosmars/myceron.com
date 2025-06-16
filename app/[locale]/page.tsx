@@ -16,7 +16,7 @@ export function generateStaticParams() {
 export default function Home() {
   return (
     <>
-      <section className="relative flex sm:h-screen w-full flex-col items-center">
+      <section className="relative flex sm:h-screen min-h-screen w-full flex-col items-center overflow-y-visible">
         <div className="absolute left-0 top-0 z-0 h-full w-full bg-gradient-to-b from-cyan-700/50 to-transparent to-40%" />
         {/* <div className="absolute left-0 top-0 z-0 h-full w-full bg-gradient-to-b from-black to-transparent to-50%"/> */}
         <div className="absolute left-0 top-0 z-0 h-full w-full bg-gradient-to-t from-cyan-700/50 to-transparent to-40%" />
